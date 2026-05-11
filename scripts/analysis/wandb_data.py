@@ -10,7 +10,9 @@ def main() -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     api = wandb.Api()
-    runs = api.runs("nplawrence/soapy-rl-pendulum-dqn-learning-sweep-2025-11-23")
+    # Update project name to match your W&B project from main_trainer.py
+    project_name = "nplawrence/soapy-rl-experiments"
+    runs = api.runs(project_name)
 
     run_name_list = []
     optimizer_list = []

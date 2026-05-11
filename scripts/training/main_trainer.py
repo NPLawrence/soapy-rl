@@ -4,7 +4,7 @@ from pathlib import Path
 import runpy
 import sys
 
-project_name = "soapy-rl-pendulum-dqn-learning-sweep-2025-11-23"
+project_name = "soapy-rl-experiments"  # Change to your W&B project name
 trials = 10
 
 optimizer = ['soap', 'adamw']

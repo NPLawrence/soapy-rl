@@ -128,8 +128,6 @@ python scripts/analysis/plot.py
 - `--env_id`: Environment name used in run naming (default: `pendulum`)
 - `--cuda`: Use GPU if available (default: True)
 
-See [REPRODUCTION.md](REPRODUCTION.md) for details on reproducing paper results exactly.
-
 ## Weights & Biases Integration
 
 Experiment tracking is enabled by default and logged to W&B. To use this feature:
@@ -178,11 +176,7 @@ Key dependencies (see `pyproject.toml` for full list):
 If you use this code, please cite:
 
 ```bibtex
-@article{...
-  title={...},
-  author={...},
-  year={2025}
-}
+@article{...}
 ```
 
 ## License
