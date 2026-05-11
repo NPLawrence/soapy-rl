@@ -1,13 +1,10 @@
 # soapy-rl
 
-Research codebase for continuous-action DQN-style control experiments with **SOAP** and **AdamW** optimizers on pendulum dynamics. This repository implements the SOAP optimizer from [Second-Order Shampoo with Adam-style Updates](https://arxiv.org/abs/2409.11321) for neural fitted Q-iteration tasks.
+Codebase for offline DQN-style control experiments with **SOAP** and **AdamW** optimizers on pendulum dynamics. This repository implements the SOAP optimizer from [SOAP: Improving and stabilizing shampoo using adam for language modeling](https://proceedings.iclr.cc/paper_files/paper/2025/hash/e988664070e9591f93fdcf605f7dc623-Abstract-Conference.html) for neural fitted Q-iteration tasks.
 
-## Overview
 
-This codebase experiments with advanced optimization techniques for reinforcement learning. The main contribution is the SOAP optimizer, which applies second-order preconditioning using Shampoo matrices to improve convergence in policy gradient and value-based RL algorithms.
-
-- **SOAP Optimizer**: Custom implementation in `soap.py` applying second-order preconditioning
-- **Training Framework**: Continuous-action control using Neuromancer and PyTorch
+- **SOAP Optimizer**: Approximate Gauss-Newton training
+- **Training Framework**: Discrete-action control and Q-iteration training using Neuromancer and PyTorch
 - **Dynamics**: Inverted Pendulum and Acrobot systems modeled as ODEs
 - **Reproducibility**: Experiment sweeps with multiple seeds and W&B integration for tracking results
 
@@ -37,9 +34,7 @@ soapy-rl/
 
 ## Quick Start
 
-### Option A: Using `uv` (Recommended)
-
-The `uv` package manager provides faster, more reliable dependency resolution. Installation is reproducible via `uv.lock`.
+Installation is reproducible via `uv.lock`.
 
 1. **Install `uv`** (if not already installed):
    ```bash
@@ -57,28 +52,6 @@ The `uv` package manager provides faster, more reliable dependency resolution. I
    ```
 
 4. **Run training**:
-   ```bash
-   python train.py
-   ```
-
-### Option B: Using `pip` (Fallback)
-
-1. **Create and activate a virtual environment**:
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
-
-2. **Install from `requirements.txt`** (generated from `uv pip compile`):
-   ```bash
-   pip install -r requirements.txt
-   ```
-   Or install directly from `pyproject.toml`:
-   ```bash
-   pip install -e .
-   ```
-
-3. **Run training**:
    ```bash
    python train.py
    ```
@@ -173,7 +146,7 @@ Key dependencies (see `pyproject.toml` for full list):
 
 ## Paper Reference
 
-If you use this code, please cite:
+If you use this code, please cite our paper:
 
 ```bibtex
 @article{bestmckay2026errorwhitening,
