@@ -176,9 +176,9 @@ Key dependencies (see `pyproject.toml` for full list):
 If you use this code, please cite:
 
 ```bibtex
-@article{...}
+@article{bestmckay2026errorwhitening,
+  title={Error whitening: Why {Gauss-Newton} outperforms {Newton}},
+  author={Best Mckay, Maricela and Lawrence, Nathan P and Wetton, Brian and Gopaluni, Bhushan},
+  year={2026}
+}
 ```
-
-## License
-
-MIT License — See [LICENSE](LICENSE) for details.
